@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_design">
+
+        <ImageView
+            android:id="@+id/iv_slider1"
+            android:layout_width="500dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/man" />
+
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_below="@id/iv_slider1"
+            android:layout_marginTop="240dp"
+            android:text="  iCalm "
+            android:letterSpacing="0.2"
+            android:layout_centerHorizontal="true"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/giveny"
+            android:textColor="@color/black"
+            android:shadowColor="@color/black"/>
+        <TextView
+            android:id="@+id/tvHeading2"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_below="@id/tvHeading"
+            android:layout_marginTop="20dp"
+            android:text=" A calm space to focus on calmness, relaxation and self development. "
+            android:letterSpacing="0.2"
+            android:lineSpacingExtra="12dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="10dp"
+            android:fontFamily="@font/color_tube"
+            android:textColor="@color/black"
+            android:shadowColor="@color/black"/>
+
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "367918609207",
+    "firebase_url": "https://icalm-6603b-default-rtdb.firebaseio.com",
+    "project_id": "icalm-6603b",
+    "storage_bucket": "icalm-6603b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367918609207:android:aac03a1ad83b17b9d460b2",
+        "android_client_info": {
+          "package_name": "com.example.icalm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367918609207-03hqrcakqap3fcpjp4e1qbh74b5onnj5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6_rVZXlDz76URS3Z8WiAOvqo5JH-KuYs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367918609207-03hqrcakqap3fcpjp4e1qbh74b5onnj5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

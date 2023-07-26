@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_design">
+
+        <ImageView
+            android:id="@+id/iv_slider3"
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group"
+            android:layout_marginTop="60dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_below="@id/iv_slider3"
+            android:layout_marginTop="190dp"
+            android:text="  Welcome  "
+            android:letterSpacing="0.2"
+            android:layout_centerHorizontal="true"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/giveny"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_signIn"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_below="@id/tvHeading"
+            android:layout_marginTop="20dp"
+            android:text="Sign In"
+            android:letterSpacing="0.2"
+            android:lineSpacingExtra="12dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:fontFamily="@font/color_tube"
+            android:textColor="#A0CBD1"/>
+        <TextView
+            android:id="@+id/tv_or"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_below="@id/tv_signIn"
+            android:layout_marginTop="20dp"
+            android:text="or"
+            android:letterSpacing="0.2"
+            android:lineSpacingExtra="12dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="12dp"
+            android:fontFamily="@font/color_tube"
+            android:textColor="#88000000"/>
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_below="@id/tv_or"
+            android:layout_marginTop="20dp"
+            android:text="Create a new account"
+            android:letterSpacing="0.2"
+            android:lineSpacingExtra="12dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:fontFamily="@font/color_tube"
+            android:textColor="#A0CBD1"/>
+
+
+    </RelativeLayout>
+</layout>

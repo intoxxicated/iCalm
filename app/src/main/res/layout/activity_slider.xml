@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SliderActivity"
+        android:background="@drawable/bg_design">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/vpSlider"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="90dp"
+            android:id="@+id/iv_skip"
+            android:src="@drawable/skip"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp"
+            android:text="NEXT"
+            android:id="@+id/btnNext"
+            android:textStyle="bold"
+            android:letterSpacing="0.7"
+            android:fontFamily="@font/giveny"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:drawableRight="@drawable/baseline_arrow_forward_24"
+            android:paddingEnd="20dp"
+            android:paddingLeft="50dp"
+           />
+    </RelativeLayout>
+</layout>
