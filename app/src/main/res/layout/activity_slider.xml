@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".SliderActivity"
+        tools:context=".slider.SliderActivity"
         android:background="@drawable/bg_design">
 
         <androidx.viewpager2.widget.ViewPager2
@@ -13,11 +13,13 @@
             android:layout_height="match_parent"
             android:id="@+id/vpSlider"/>
 
-        <ImageView
-            android:layout_width="50dp"
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="wrap_content"
             android:layout_height="90dp"
             android:id="@+id/iv_skip"
-            android:src="@drawable/skip"
+            android:text="Do'nt show again"
+            android:textColor="@color/white"
+            android:textSize="12dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_marginRight="20dp"/>

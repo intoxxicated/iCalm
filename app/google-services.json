@@ -15,7 +15,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "367918609207-03hqrcakqap3fcpjp4e1qbh74b5onnj5.apps.googleusercontent.com",
+          "client_id": "367918609207-8nkm0n7fcl2r56gtevnqq2kgc7iam5p5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.icalm",
+            "certificate_hash": "212982f9dd4c0cc6cd0b3a9a5a0dea59852be7c1"
+          }
+        },
+        {
+          "client_id": "367918609207-dcqu8lb7veamserukedo0c8ipn0dgq0t.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

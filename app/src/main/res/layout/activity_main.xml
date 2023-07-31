@@ -20,20 +20,22 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_below="@id/iv_slider3"
-            android:layout_marginTop="190dp"
+            android:layout_marginTop="200dp"
             android:text="  Welcome  "
             android:letterSpacing="0.2"
             android:layout_centerHorizontal="true"
             android:textSize="40sp"
             android:textStyle="bold"
+
             android:fontFamily="@font/giveny"
             android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tv_signIn"
-            android:layout_width="400dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:textAlignment="center"
+            android:background="@drawable/button"
             android:layout_below="@id/tvHeading"
             android:layout_marginTop="20dp"
             android:text="Sign In"
@@ -41,11 +43,12 @@
             android:lineSpacingExtra="12dp"
             android:layout_centerHorizontal="true"
             android:textSize="16dp"
+            android:padding="5dp"
             android:fontFamily="@font/color_tube"
             android:textColor="#A0CBD1"/>
         <TextView
             android:id="@+id/tv_or"
-            android:layout_width="400dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_below="@id/tv_signIn"
@@ -60,14 +63,16 @@
 
         <TextView
             android:id="@+id/tv_register"
-            android:layout_width="400dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="5dp"
             android:textAlignment="center"
             android:layout_below="@id/tv_or"
             android:layout_marginTop="20dp"
-            android:text="Create a new account"
+            android:text="    Create a new account     "
             android:letterSpacing="0.2"
             android:lineSpacingExtra="12dp"
+            android:background="@drawable/button"
             android:layout_centerHorizontal="true"
             android:textSize="16dp"
             android:fontFamily="@font/color_tube"

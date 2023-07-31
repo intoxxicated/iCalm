@@ -1,12 +1,18 @@
-package com.example.icalm;
+package com.example.icalm.slider;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 
+import com.example.icalm.HomeActivity;
+import com.example.icalm.MainActivity;
 import com.example.icalm.databinding.ActivitySliderBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SliderActivity extends AppCompatActivity {
 
@@ -18,9 +24,17 @@ public class SliderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding=ActivitySliderBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        FirebaseAuth auth= FirebaseAuth.getInstance();
+        FirebaseUser currentUser = auth.getCurrentUser();
+        if(currentUser!= null)
+        {
+            startHomeActivity();
+            return;
+        }
 
         sliderAdapter = new SliderAdapter(this);
         binding.vpSlider.setAdapter(sliderAdapter);
+
         binding.ivSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,4 +56,11 @@ public class SliderActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+    private  void  startHomeActivity()
+    {
+        Intent intent = new Intent(SliderActivity.this, HomeActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 }

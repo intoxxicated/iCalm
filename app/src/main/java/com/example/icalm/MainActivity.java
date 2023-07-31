@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.icalm.databinding.ActivityMainBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding=ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         binding.tvSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent=new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
+//            changes are here
         });
     }
+
 }

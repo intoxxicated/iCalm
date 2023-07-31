@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_below="@id/iv_slider2"
-            android:layout_marginTop="240dp"
+            android:layout_marginTop="260dp"
             android:text=" Practice Self Help "
             android:letterSpacing="0.2"
             android:layout_centerHorizontal="true"
@@ -38,8 +38,8 @@
             android:letterSpacing="0.2"
             android:lineSpacingExtra="12dp"
             android:layout_centerHorizontal="true"
-            android:textSize="10dp"
-            android:fontFamily="@font/color_tube"
+            android:textSize="14dp"
+            android:fontFamily="@font/times_new_roman"
             android:textColor="@color/black" />
 
 
