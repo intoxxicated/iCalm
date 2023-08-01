@@ -4,27 +4,23 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.preference.PreferenceManager;
 
-import com.example.icalm.HomeActivity;
 import com.example.icalm.LoginActivity;
 import com.example.icalm.R;
-import com.example.icalm.databinding.FragmentHomeBinding;
 import com.example.icalm.databinding.FragmentProfileBinding;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -51,10 +47,14 @@ public class ProfileFragment extends Fragment
                 if(id==R.id.nav_Logout)
                 {
                     showLogoutAlert();
-                }    if(id==R.id.nav_edit_profile)
-                {
-                    loadFragment(new EditFragment());
                 }
+                if(id==R.id.nav_edit_profile)
+                {
+                    loadFragment(new EditProfileFragment());
+                }
+                if(id==R.id.nav_look_trainer)
+                {
+                    searchYogaCenterOnMap();                }
                 return true;
             }
         });
@@ -122,4 +122,13 @@ public class ProfileFragment extends Fragment
     }
 
 
+    private void searchYogaCenterOnMap() {
+        // Replace "Yoga Center" with any search term you want to use
+        String location = "geo:0,0?q=Yoga+Trainer";
+        Uri gmmIntentUri = Uri.parse(location);
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        Log.e("map", ""+mapIntent.getData());
+        startActivity(mapIntent);
+    }
 }

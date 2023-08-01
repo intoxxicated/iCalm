@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -24,10 +24,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.UploadTask;
 
-public class EditFragment extends Fragment {
+public class EditProfileFragment extends Fragment {
     EditProfileBinding binding;
     FirebaseStorage firebaseStorage;
-    public EditFragment() {
+    public EditProfileFragment() {
         // Required empty public constructor
     }
 
@@ -39,26 +39,11 @@ public class EditFragment extends Fragment {
         binding.btnUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.e("check", "upload");
                 uploadPhoto();
             }
         });
         return binding.getRoot();
-    }
-    private void loadFragment(Fragment fragment) {
-
-        FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-
-        // Start a FragmentTransaction
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        // Replace the existing fragment with the new fragment
-        fragmentTransaction.replace(R.id.fragment_container, fragment);
-
-        // Add the transaction to the back stack (optional)
-        fragmentTransaction.addToBackStack(null);
-
-        // Commit the transaction
-        fragmentTransaction.commit();
     }
 
     private void uploadPhoto()
@@ -68,23 +53,13 @@ public class EditFragment extends Fragment {
                 .compress(1024)			//Final image size will be less than 1 MB(Optional)
                 .maxResultSize(1080, 1080)	//Final image resolution will be less than 1080 x 1080(Optional)
                 .start();
+//        binding.dp.setImageURI();
     }
 
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == Activity.RESULT_OK) {
-            assert data != null;
-            Uri uri = data.getData();
-
-            binding.dp.setImageURI(uri);
-            uploadImage(uri);
-        }
-    }
-
-    private void uploadImage(Uri uri) {
-
+    public void uploadImage(Uri uri) {
+        binding.dp.setImageURI(uri);
+        Log.e("here", "uploAD image");
         firebaseStorage.getReference()
                 .child("dp")
                 .putFile(uri)

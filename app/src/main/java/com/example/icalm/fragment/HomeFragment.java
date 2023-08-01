@@ -36,13 +36,6 @@ public class HomeFragment extends Fragment {
         itemList = getDummyData(); // Replace getDummyData() with your actual data source
         gridAdapter = new GridAdapter(itemList);
         binding.recyclerView.setAdapter(gridAdapter);
-//        binding.recyclerView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//               // int id=gridAdapter.getItemId();
-//
-//            }
-//        });
         return binding.getRoot();
     }
 

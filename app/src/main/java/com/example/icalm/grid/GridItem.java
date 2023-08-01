@@ -16,4 +16,13 @@ public class GridItem {
     public String getText() {
         return text;
     }
+
+
+    @Override
+    public String toString() {
+        return "GridItem{" +
+                "imageResource=" + imageResource +
+                ", text='" + text + '\'' +
+                '}';
+    }
 }

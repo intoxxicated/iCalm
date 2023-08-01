@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,6 +19,7 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
     private List<GridItem> itemList;
 
     public GridAdapter(List<GridItem> itemList) {
+
         this.itemList = itemList;
     }
 
@@ -34,6 +36,15 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
         GridItem item = itemList.get(position);
         holder.imageView.setImageResource(item.getImageResource());
         holder.textView.setText(item.getText());
+
+        holder.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), "clicked"+getItemId(position), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
     }
 
     @Override
@@ -45,8 +56,12 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
         ImageView imageView;
         TextView textView;
 
+        View view;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            view = itemView;
+
             imageView = itemView.findViewById(R.id.image_view);
             textView = itemView.findViewById(R.id.text_view);
         }
