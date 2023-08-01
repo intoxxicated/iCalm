@@ -14,6 +14,7 @@ import android.view.View;
 
 import android.widget.Toast;
 
+import com.example.icalm.DataClass.User;
 import com.example.icalm.databinding.ActivityLoginBinding;
 
 import com.google.android.gms.auth.api.identity.BeginSignInRequest;
@@ -36,24 +37,30 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
-
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class LoginActivity extends AppCompatActivity {
 
     private SignInClient oneTapClient;
-    FirebaseAuth auth;
-    private static final int REQ_ONE_TAP = 2;  // Can be any integer unique to the Activity.
+  ;
+    private static final int REQ_ONE_TAP = 2;
     private boolean showOneTapUI = true;
     private BeginSignInRequest signInRequest;
     ActivityLoginBinding binding;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+
+    DatabaseReference databaseReference = database.getReference();
+    FirebaseAuth auth=FirebaseAuth.getInstance();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding= ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        auth=FirebaseAuth.getInstance();
         FirebaseUser currentUser = auth.getCurrentUser();
         if(currentUser!= null)
         {
@@ -64,6 +71,7 @@ public class LoginActivity extends AppCompatActivity {
         binding.btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 loginUserAccount();
             }
         });
@@ -177,8 +185,12 @@ public class LoginActivity extends AppCompatActivity {
                                         if (task.isSuccessful()) {
                                             // Sign in success, update UI with the signed-in user's information
                                             Log.d("TAG", "signInWithCredential:success");
-                                            FirebaseUser user = auth.getCurrentUser();
+
+
+                                                addToFirebase();
+
                                             saveLoginState();
+
                                             startHomeActivity();
                                         } else {
                                             // If sign in fails, display a message to the user.
@@ -205,5 +217,18 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
         startActivity(intent);
         finish();
+    }
+    public  void  addToFirebase()
+    {
+        FirebaseUser currentUser = auth.getCurrentUser();
+        String userId = currentUser.getUid();
+        String name=currentUser.getDisplayName();
+        String email=currentUser.getEmail();
+        String phone=currentUser.getPhoneNumber();
+        User user = new User(userId,name,phone, email,"","","","");
+        databaseReference.child("users").child(userId).setValue(user);
+
+
+
     }
 }

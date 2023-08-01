@@ -1,5 +1,6 @@
-package com.example.icalm.grid;
+package com.example.icalm.Adapter;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.icalm.GridItem;
 import com.example.icalm.R;
 
 import java.util.List;
@@ -17,6 +19,9 @@ import java.util.List;
 public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
     private List<GridItem> itemList;
+    int itemSelected;
+
+
 
     public GridAdapter(List<GridItem> itemList) {
 
@@ -32,7 +37,7 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         GridItem item = itemList.get(position);
         holder.imageView.setImageResource(item.getImageResource());
         holder.textView.setText(item.getText());
@@ -40,7 +45,8 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), "clicked"+getItemId(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(view.getContext(), "clicled "+position, Toast.LENGTH_SHORT).show();
+                itemSelected=position;
 
             }
         });
@@ -49,6 +55,7 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
+
         return itemList.size();
     }
 
@@ -66,4 +73,5 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
             textView = itemView.findViewById(R.id.text_view);
         }
     }
+
 }

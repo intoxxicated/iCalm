@@ -31,6 +31,7 @@ public class ProfileFragment extends Fragment
     AlertDialog dialog;
 
 
+
     public ProfileFragment() {
         // Required empty public constructor
     }
@@ -104,7 +105,17 @@ public class ProfileFragment extends Fragment
         editor.putBoolean("isLoggedIn", false);
         editor.apply();
     }
-    private void loadFragment(Fragment fragment) {
+
+
+    private void searchYogaCenterOnMap() {
+        String location = "geo:0,0?q=Yoga+Trainer";
+        Uri gmmIntentUri = Uri.parse(location);
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        Log.e("map", ""+mapIntent.getData());
+        startActivity(mapIntent);
+    }
+    public void loadFragment(Fragment fragment) {
 
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
 
@@ -121,14 +132,4 @@ public class ProfileFragment extends Fragment
         fragmentTransaction.commit();
     }
 
-
-    private void searchYogaCenterOnMap() {
-        // Replace "Yoga Center" with any search term you want to use
-        String location = "geo:0,0?q=Yoga+Trainer";
-        Uri gmmIntentUri = Uri.parse(location);
-        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-        mapIntent.setPackage("com.google.android.apps.maps");
-        Log.e("map", ""+mapIntent.getData());
-        startActivity(mapIntent);
-    }
 }

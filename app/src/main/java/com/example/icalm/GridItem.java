@@ -1,4 +1,4 @@
-package com.example.icalm.grid;
+package com.example.icalm;
 
 public class GridItem {
     private int imageResource;

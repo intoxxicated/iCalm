@@ -1,4 +1,4 @@
-package com.example.icalm;
+package com.example.icalm.DataClass;
 
 public class User {
     String uuid;
@@ -10,6 +10,8 @@ public class User {
     public String address;
     public String dp;
 
+    public User() {
+    }
 
     public User(String uuid, String name, String phone, String email, String password, String address, String dob, String dp){
         this.email = email;
