@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LoginActivity"
+        tools:context=".Activity.LoginActivity"
         android:background="@drawable/bg_gradient">
 
         <TextView
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="15"
-            android:hint="Update Your Name"
+            android:hint="Enter Your Name"
             android:id="@+id/etName"
             android:layout_below="@id/ivSignUp"
             app:layout_constraintTop_toBottomOf="@id/ivSignUp"
@@ -69,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="15"
-            android:hint="Update Your Phone No."
+            android:hint="Enter Your Phone No."
             android:padding="8dp"
             android:id="@+id/etPhone"
             app:layout_constraintTop_toBottomOf="@id/etName"

@@ -1,4 +1,4 @@
-package com.example.icalm;
+package com.example.icalm.Activity;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.icalm.DataClass.User;
+import com.example.icalm.R;
 import com.example.icalm.databinding.ActivityLoginBinding;
 
 import com.google.android.gms.auth.api.identity.BeginSignInRequest;
@@ -35,8 +36,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -14,28 +13,26 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/notepad"/>
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/baseline_menu_book_24"/>
 
         <TextView
-            android:id="@+id/textViewNoteContent"
+            android:id="@+id/ebookName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="DSA Book"
             android:textSize="18dp"
-
             android:layout_marginLeft="16dp"
             android:textColor="@color/black"
             android:fontFamily="@font/times_new_roman"/>
 
         <ImageView
-            android:id="@+id/noteDelete"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@android:drawable/ic_menu_delete"
-            android:layout_gravity="end"
+            android:id="@+id/ebookDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_download"
             android:layout_marginLeft="-30dp"/>
 
 
@@ -45,4 +42,3 @@
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
-</layout>

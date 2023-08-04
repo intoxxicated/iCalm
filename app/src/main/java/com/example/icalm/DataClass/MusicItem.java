@@ -1,10 +1,10 @@
-package com.example.icalm;
+package com.example.icalm.DataClass;
 
-public class GridItem {
+public class MusicItem {
     private int imageResource;
     private String text;
 
-    public GridItem(int imageResource, String text) {
+    public MusicItem(int imageResource, String text) {
         this.imageResource = imageResource;
         this.text = text;
     }

@@ -1,4 +1,4 @@
-package com.example.icalm.fragment;
+package com.example.icalm.fragment.Home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.icalm.R;
 import com.example.icalm.databinding.FragmentHomeBinding;
 import com.example.icalm.Adapter.GridAdapter;
-import com.example.icalm.GridItem;
+import com.example.icalm.DataClass.GridItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,12 +20,11 @@ import java.util.List;
 public class HomeFragment extends Fragment {
     FragmentHomeBinding binding;
 
-    private RecyclerView recyclerView;
     private GridAdapter gridAdapter;
     private List<GridItem> itemList;
 
     public HomeFragment() {
-        // Required empty public constructor
+
     }
 
     @Override
@@ -47,8 +46,8 @@ public class HomeFragment extends Fragment {
         dummyData.add(new GridItem(R.drawable.read, "Read"));
         dummyData.add(new GridItem(R.drawable.doctor, "Doctor"));
         dummyData.add(new GridItem(R.drawable.yoga, "Yoga"));
-        dummyData.add(new GridItem(R.drawable.img_journal, "Journal"));
-        dummyData.add(new GridItem(R.drawable.alarm, "Time Management"));
+        dummyData.add(new GridItem(R.drawable.img_journal, "Tips"));
+        dummyData.add(new GridItem(R.drawable.alarm, "Progress Streak"));
         return dummyData;
     }
 }

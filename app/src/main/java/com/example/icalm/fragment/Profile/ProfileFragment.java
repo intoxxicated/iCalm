@@ -1,4 +1,4 @@
-package com.example.icalm.fragment;
+package com.example.icalm.fragment.Profile;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -19,7 +19,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.preference.PreferenceManager;
 
-import com.example.icalm.LoginActivity;
+import com.example.icalm.Activity.LoginActivity;
 import com.example.icalm.R;
 import com.example.icalm.databinding.FragmentProfileBinding;
 import com.google.android.material.navigation.NavigationView;
@@ -55,7 +55,12 @@ public class ProfileFragment extends Fragment
                 }
                 if(id==R.id.nav_look_trainer)
                 {
-                    searchYogaCenterOnMap();                }
+                    searchYogaCenterOnMap();
+                }
+                if(id==R.id.nav_contact_us)
+                {
+                   loadFragment(new ContactUsFragment());
+                }
                 return true;
             }
         });

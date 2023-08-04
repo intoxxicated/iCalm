@@ -1,4 +1,4 @@
-package com.example.icalm.fragment;
+package com.example.icalm.fragment.Profile;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -152,6 +152,7 @@ public class EditProfileFragment extends Fragment {
                     binding.etPhone.setText(user.getPhone());
                     binding.etAddress.setText(user.getAddress());
                     binding.etAge.setText(user.getDob());
+                    binding.etEmail.setEnabled(false);
 
 
                }

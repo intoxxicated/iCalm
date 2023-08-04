@@ -1,4 +1,4 @@
-package com.example.icalm;
+package com.example.icalm.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,11 +14,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
+import com.example.icalm.R;
 import com.example.icalm.databinding.ActivityHomeBinding;
-import com.example.icalm.fragment.EditProfileFragment;
-import com.example.icalm.fragment.HomeFragment;
-import com.example.icalm.fragment.JournalFragment;
-import com.example.icalm.fragment.ProfileFragment;
+import com.example.icalm.fragment.MusicFragment;
+import com.example.icalm.fragment.Profile.EditProfileFragment;
+import com.example.icalm.fragment.Home.HomeFragment;
+import com.example.icalm.fragment.Journal.JournalFragment;
+import com.example.icalm.fragment.Profile.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
@@ -58,6 +60,11 @@ public class HomeActivity extends AppCompatActivity {
                 if (id == R.id.nav_journal)
                 {
                     loadFragment(new JournalFragment());
+                    return true;
+                }
+                if (id == R.id.nav_music)
+                {
+                    loadFragment(new MusicFragment());
                     return true;
                 }
                 return false;

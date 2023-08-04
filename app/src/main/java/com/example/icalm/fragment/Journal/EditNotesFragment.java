@@ -1,4 +1,4 @@
-package com.example.icalm.fragment;
+package com.example.icalm.fragment.Journal;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -49,12 +49,13 @@ public class EditNotesFragment extends Fragment {
                 }
             }
         });
+
         return binding.getRoot();
 
     }
     public void saveNoteToFirebase(String content , String title) {
         String noteId = notesReference.push().getKey();
-        Note note = new Note(title, content);
+        Note note = new Note(title, content,noteId);
         notesReference.child(noteId).setValue(note);
     }
 }

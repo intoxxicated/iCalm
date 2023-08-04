@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/goalTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Meditation Goal"
+        android:textSize="25sp"
+        android:fontFamily="@font/times_new_roman"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:background="#315072A3"/>
+
+    <TextView
+        android:id="@+id/goalDescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Achieve mindfulness through daily meditation."
+        android:textSize="18sp"
+        android:fontFamily="@font/times_new_roman"
+        android:textColor="@color/black" />
+
+</LinearLayout>

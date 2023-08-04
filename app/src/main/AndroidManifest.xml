@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <meta-data
         android:name="com.google.android.geo.API_KEY"
         android:value="YOUR_API_KEY" />
-
 
     <application
         android:allowBackup="true"
@@ -21,19 +23,34 @@
         android:theme="@style/Theme.ICalm"
         tools:targetApi="31">
         <activity
-            android:name=".HomeActivity"
+            android:name=".ProgressActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".GoalsActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".VideoActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".fragment.Home.TipsActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Activity.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.Home.ebook.EbookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,8 +61,6 @@
         <activity
             android:name=".slider.SliderActivity"
             android:exported="true" />
-
-
     </application>
 
 </manifest>

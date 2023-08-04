@@ -1,4 +1,4 @@
-package com.example.icalm;
+package com.example.icalm.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.icalm.databinding.ActivityMainBinding;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
