@@ -1,0 +1,45 @@
+<!-- res/layout/activity_progress.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/bg_blue">
+
+    <TextView
+        android:id="@+id/totalMinutesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Meditation Minutes: 0"
+        android:textSize="22sp"
+        android:fontFamily="@font/times_new_roman"
+        android:textColor="@color/white"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/streakTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Streak: 0 days"
+        android:textSize="22sp"
+        android:fontFamily="@font/times_new_roman"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/meditateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   Meditate   "
+        android:layout_gravity="center"
+        android:background="@drawable/bg"
+        android:layout_marginTop="18sp"
+        android:fontFamily="@font/giveny"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:letterSpacing="0.2"/>
+
+</LinearLayout>

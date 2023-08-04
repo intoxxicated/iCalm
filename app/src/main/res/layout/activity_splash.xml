@@ -5,13 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity">
+    tools:context=".Activity.SplashActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/logo"
-        android:id="@+id/ivSplash"/>
+        android:src="@drawable/splash"
+        android:id="@+id/ivSplash"
+        android:scaleType="centerCrop"/>
 
 </RelativeLayout>
 </layout>

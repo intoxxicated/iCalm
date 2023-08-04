@@ -34,6 +34,7 @@ public class NoteAdapter extends ArrayAdapter<Note> {
 
     }
 
+    @SuppressLint("ViewHolder")
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

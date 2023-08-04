@@ -5,8 +5,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LoginActivity"
-        android:background="@drawable/bg_settings"
+        tools:context=".Activity.LoginActivity"
         android:padding="20dp">
 
 
@@ -18,8 +17,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/name"
-            android:src="@color/white"
-            app:civ_border_color="#FF000000"
+            android:src="@drawable/profile_image"
+            app:civ_border_color="#2196F3"
             android:layout_width="180dp"
             android:layout_height="200dp"/>
 

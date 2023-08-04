@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/textViewNoteContent"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#00FF0000"
-    android:padding="16dp"
-    android:textSize="18sp"
-    android:layout_marginBottom="5dp"
-    android:textStyle="bold"
-    android:fontFamily="@font/times_new_roman"
-    android:textColor="@color/black"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="3dp"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/notepad"/>
+
+        <TextView
+            android:id="@+id/textViewNoteContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DSA Book"
+            android:textSize="18dp"
+
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/times_new_roman"/>
+
+        <ImageView
+            android:id="@+id/noteDelete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:layout_gravity="end"
+            android:layout_marginLeft="-30dp"/>
+
+
+
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
 </layout>
